@@ -1,3 +1,25 @@
+.localisation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  height: 50px;
+  background-color: rgb(234, 234, 234);
+}
+
 body {
-  background-color: lightblue;
+  margin: 0px;
+}
+
+.navbar {
+  padding: 14px 89px 13px 89px;
+  height: 63px;
+}
+.navbar .navbar__img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

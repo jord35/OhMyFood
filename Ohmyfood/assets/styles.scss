@@ -1,3 +1,7 @@
-body {
-    background-color: lightblue;
-  }
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+@import 'global';
+@import 'nav';
+@import 'functioning';
