@@ -1,0 +1,34 @@
+footer{
+    background-color: #353535;
+    .footer_ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0px;
+        padding-bottom: 22px;
+        padding-inline-start: 25px;
+        gap: 7px;
+        .logo {
+            font-family: Shrikhand ;
+            color: #FFFFFF;
+            font-size: 18px;
+            margin: 22px 0px 9px 0px;
+           }
+        .footer_li{
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            gap: 11px;
+            color: white;
+            .simbole {
+                font-size: 13px; // ou ajuste à ta convenance
+                width: 13px;
+                height: 13px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+    }
+}

@@ -1,3 +1,8 @@
+
+
+.header {
+    background-color: #F6F6F6;
+
 .localisation{
     display: flex;
     flex-direction: row;
@@ -7,4 +12,38 @@
     height: 50px;
     background-color: rgb(234,234,234);
 
+}
+.title_zone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+.title{
+    @include style-title;
+    text-align: center;
+    padding: 0px 20px;
+    margin: 39px 0px 18px 0px;
+}
+p{
+    font-size: 18px ;
+    font-weight: lighter;
+    text-align: center;
+    padding: 0px 20px;
+    margin: 0px 0px 27px 0px;
+
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(-149deg, #9356DC, #FF79DA);
+    width: 218px;
+    height: 50px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 0px;
+    margin-bottom: 57px;
+}
+}
 }
