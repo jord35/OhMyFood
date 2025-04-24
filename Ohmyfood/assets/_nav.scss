@@ -1,13 +1,12 @@
 .navbar{
-    // padding: 14px 89px 13px 89px;
-    // height: 63px;
-    .navbar__img{
-        display: flex;
-        // width: 197px;
-        // height: 36px;
-        margin: 14px 89px 13px 89px;
-        box-sizing: border-box;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 63px; 
+    .navbar__img {
         object-fit: contain;
+        width: 197px;
+        height: 36px;
     }
+
 }

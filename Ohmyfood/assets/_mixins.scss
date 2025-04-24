@@ -1,8 +1,21 @@
-@mixin style-title{
-    text-align: start;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0px;
-    
+@mixin style-title($size: 24px, $weight: bold, $align: start, $margin: 0px) {
+    text-align: $align;
+    font-size: $size;
+    font-weight: $weight;
+    margin: $margin;
+  }
 
+@mixin btn($width:218px,$font-size:16px,$margin-bottom:57px){
+    width: $width;
+    font-size: $font-size;
+    margin-bottom: $margin-bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(-149deg, $purple, $pink);
+    height: 50px;
+    color: $light-white;
+    padding: 0px;
 }
