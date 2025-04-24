@@ -8,9 +8,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        @include shadow($blur:4px);
         gap: 17px;
         height: 50px;
-        background-color: $grey
+        background-color: $grey;
+        
+        
 }
     .header__title_zone{
         display: flex;
@@ -24,14 +27,14 @@
 }
     .header__paragraph{
         font-size: 18px ;
-        font-weight: lighter;
         text-align: center;
         padding: 0px 20px;
         margin: 0px 0px 27px 0px;
 
 }
     .header__btn{
-        @include btn
+        @include btn;
+        @include shadow;
         
 }
 }

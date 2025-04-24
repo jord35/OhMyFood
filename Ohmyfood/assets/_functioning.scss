@@ -12,6 +12,7 @@
         background-color: $dark-white;
         padding: 10px 0px 10px 20px;
         overflow: visible; 
+        @include shadow($blur:15px,$color:rgba(0,0,0,0.15))
       }
       .fa-solid {
         margin-left: 23px;

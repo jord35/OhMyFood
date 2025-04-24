@@ -6,6 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   gap: 17px;
   height: 50px;
   background-color: #EAEAEA;
@@ -25,7 +26,6 @@
 }
 .header .header__title_zone .header__paragraph {
   font-size: 18px;
-  font-weight: lighter;
   text-align: center;
   padding: 0px 20px;
   margin: 0px 0px 27px 0px;
@@ -43,6 +43,7 @@
   height: 50px;
   color: #ffffff;
   padding: 0px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -84,7 +85,7 @@ body {
 }
 
 .title {
-  text-align: center;
+  text-align: start;
   font-size: 24px;
   font-weight: bold;
   margin: 10px 0;
@@ -122,6 +123,7 @@ body {
   background-color: #F6F6F6;
   padding: 10px 0px 10px 20px;
   overflow: visible;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .functioning .fa-solid {
   margin-left: 23px;
