@@ -39,11 +39,15 @@
   justify-content: center;
   border-radius: 25px;
   border: none;
-  background: linear-gradient(-149deg, #9356DC, #FF79DA);
+  background: linear-gradient(-161deg, #9356DC, #FF79DA);
   height: 50px;
   color: #ffffff;
   padding: 0px;
+  transition: box-shadow 200ms;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.header .header__title_zone .header__btn:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 footer {
@@ -179,9 +183,30 @@ body {
   background-color: #ffffff;
   border-radius: 0px 0px 15px 15px;
 }
-.restaurant .restaurant__card .restaurant__content .fa-regular {
+.restaurant .restaurant__card .restaurant__content .restaurant__heart {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.restaurant .restaurant__card .restaurant__content .restaurant__heart .restaurant__heart-checkbox {
+  display: none;
+}
+.restaurant .restaurant__card .restaurant__content .restaurant__heart .fa-regular {
   font-size: 22px;
   color: black;
+  transition: color 0.3s;
+}
+.restaurant .restaurant__card .restaurant__content .restaurant__heart .restaurant__heart-checkbox:checked + .fa-regular {
+  color: #9356DC;
+}
+.restaurant .restaurant__card .restaurant__content .restaurant__heart .restaurant__heart-checkbox:checked + .fa-regular::after {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #9356DC;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .restaurant .restaurant__card .restaurant__content .restaurant__txt {
   display: flex;

@@ -14,11 +14,17 @@
     justify-content: center;
     border-radius: 25px;
     border: none;
-    background: linear-gradient(-149deg, $purple, $pink);
+    background: linear-gradient(-161deg, $purple, $pink);
     height: 50px;
     color: $light-white;
     padding: 0px;
+    transition: box-shadow 200ms;
+    &:hover {
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    }
+    
 }
 @mixin shadow($x:0px,$y:4px,$blur:10px,$color:rgba(0,0,0,0.25)){
     box-shadow: $x $y $blur $color;
 }
+// @include shadow(0px,4px ,15px ,0,0,0,0.35 );

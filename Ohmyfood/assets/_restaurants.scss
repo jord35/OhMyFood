@@ -30,10 +30,42 @@
             background-color: $light-white;
             border-radius: 0px 0px 15px 15px;
 
-            .fa-regular{
-                font-size: 22px;
-                color: black;
-            }
+            .restaurant__heart {
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+              
+                
+                .restaurant__heart-checkbox {
+                  display: none;
+                }
+              
+                
+                .fa-regular {
+                  font-size: 22px;
+                  color: black;
+                  transition: color 0.3s;
+                }
+              
+                
+                .restaurant__heart-checkbox:checked + .fa-regular {
+                  color: $purple; 
+                }
+              
+                
+                .restaurant__heart-checkbox:checked + .fa-regular::after {
+                  content: "\f004"; 
+                  font-family: "Font Awesome 6 Free";
+                  font-weight: 900; 
+                  color: $purple;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+              }
+              
+              
+              
             .restaurant__txt{
                 display: flex;
                 flex-direction: column;
