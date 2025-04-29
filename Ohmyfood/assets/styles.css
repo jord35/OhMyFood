@@ -6,7 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   gap: 17px;
   height: 50px;
   background-color: #EAEAEA;
@@ -22,12 +22,12 @@
   font-weight: bold;
   margin: 39px 0px 18px 0px;
   text-align: center;
-  padding: 0px 20px;
 }
 .header .header__title_zone .header__paragraph {
   font-size: 18px;
   text-align: center;
-  padding: 0px 20px;
+  font-weight: lighter;
+  color: rgb(53, 53, 53);
   margin: 0px 0px 27px 0px;
 }
 .header .header__title_zone .header__btn {
@@ -39,15 +39,15 @@
   justify-content: center;
   border-radius: 25px;
   border: none;
-  background: linear-gradient(-161deg, #9356DC, #FF79DA);
+  background: linear-gradient(-161deg, #FF79DA, #9356DC);
   height: 50px;
   color: #ffffff;
   padding: 0px;
-  transition: box-shadow 200ms;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 300ms;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 50px rgba(255, 255, 255, 0);
 }
 .header .header__title_zone .header__btn:hover {
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25), inset 0px 0px 0.5px 50px rgba(255, 255, 255, 0.1);
 }
 
 footer {
@@ -92,7 +92,7 @@ body {
   text-align: start;
   font-size: 24px;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 0px 0px;
 }
 
 * {
@@ -117,6 +117,7 @@ body {
   flex-direction: column;
   padding: 48px 20px 68px 20px;
   gap: 25px;
+  font-weight: l;
 }
 .functioning .functioning__card {
   position: relative;
@@ -126,14 +127,57 @@ body {
   border-radius: 25px;
   background-color: #F6F6F6;
   padding: 10px 0px 10px 20px;
+  margin-left: 12px;
   overflow: visible;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.functioning .fa-solid {
+.functioning .functioning__font-container--mobile {
+  width: 13.02px;
+  height: 19.9px;
   margin-left: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.functioning .fa-solid.fa-solid--colore {
+.functioning .functioning__font-container--mobile .fa-solid {
+  font-size: calc(19.9px * 1);
+  width: 100%;
+  height: 100%;
+  color: #7E7E7E;
+  display: block;
+  line-height: 1;
+}
+.functioning .functioning__font-container--list {
+  width: 16px;
+  height: 15.92px;
+  margin-left: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.functioning .functioning__font-container--list .fa-solid {
+  font-size: calc(15.92px * 1);
+  width: 100%;
+  height: 100%;
+  color: #7E7E7E;
+  display: block;
+  line-height: 1;
+}
+.functioning .functioning__font-container--store {
+  width: 18px;
+  height: 17.91px;
+  margin-left: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.functioning .functioning__font-container--store .fa-solid {
+  font-size: calc(17.91px * 1);
+  width: 100%;
+  height: 100%;
   color: #9356DC;
+  display: block;
+  line-height: 1;
 }
 .functioning .functioning__number-container {
   position: absolute;
@@ -146,8 +190,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
   font-size: 14.18px;
+}
+.functioning .functioning__subtitle {
+  text-align: start;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 18.89px 0px 18.12px 0px;
 }
 
 .restaurant {
@@ -166,6 +215,8 @@ body {
   box-sizing: border-box;
   border-radius: 15px;
   text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .restaurant .restaurant__card .restaurant__img {
   height: 70%;
@@ -193,20 +244,19 @@ body {
 }
 .restaurant .restaurant__card .restaurant__content .restaurant__heart .fa-regular {
   font-size: 22px;
+  font-weight: 300;
   color: black;
-  transition: color 0.3s;
+  transition: color 600ms, background-color 600ms ease-out;
 }
 .restaurant .restaurant__card .restaurant__content .restaurant__heart .restaurant__heart-checkbox:checked + .fa-regular {
-  color: #9356DC;
-}
-.restaurant .restaurant__card .restaurant__content .restaurant__heart .restaurant__heart-checkbox:checked + .fa-regular::after {
   content: "\f004";
+  color: transparent;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #9356DC;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: linear-gradient(90deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurant .restaurant__card .restaurant__content .restaurant__txt {
   display: flex;

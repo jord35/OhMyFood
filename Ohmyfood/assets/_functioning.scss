@@ -11,21 +11,25 @@
         border-radius: 25px;
         background-color: $dark-white;
         padding: 10px 0px 10px 20px;
+        margin-left: 12px;
         overflow: visible; 
-        @include shadow($blur:15px,$color:rgba(0,0,0,0.15))
+        box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25) ;
       }
-      .fa-solid {
-        margin-left: 23px;
-      
-        &.fa-solid--colore {
-          color: $purple;
+      .functioning__font-container--mobile{
+        @include font-container(13.02px,19.9px,$simpbol-color)
+        }  
+      .functioning__font-container--list{
+        @include font-container(16px,15.92px,$simpbol-color)
         }
+      .functioning__font-container--store{
+        @include font-container(18px,17.91px,$purple)
       }
-     
+        
+     font-weight: l;
       
       .functioning__number-container {
         position: absolute;
-        left: -12px; // Ajuste pour combien tu veux qu'il sorte
+        left: -12px; 
         height: 24px;
         width: 24px;
         // border: solid 1px #D9D9D9;
@@ -35,8 +39,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold;
+        // font-weight: bold;
         font-size: 14.18px;
       }
-    
+    .functioning__subtitle{
+      @include style-title($size: 16px, $weight:500,$margin: 18.89px 0px 18.12px 0px)
+    }
 }

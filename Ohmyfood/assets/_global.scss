@@ -2,7 +2,7 @@ body {
     margin: 0px;
   }
 .title {
-    @include style-title(24px, bold, start, 10px 0);
+    @include style-title(24px, bold, start, 0px 0px);
   }
 *{font-family: 'Roboto',sans-serif;
 }

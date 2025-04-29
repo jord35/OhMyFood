@@ -14,17 +14,56 @@
     justify-content: center;
     border-radius: 25px;
     border: none;
-    background: linear-gradient(-161deg, $purple, $pink);
+    background: linear-gradient(-161deg, $pink, $purple);
     height: 50px;
     color: $light-white;
     padding: 0px;
-    transition: box-shadow 200ms;
+    transition: box-shadow 300ms ;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25) 
+    , inset 0px 0px 0px 50px rgba(255, 255, 255, 0.0); 
     &:hover {
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    }
+        box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25) 
+        , inset 0px 0px 0.5px 50px rgba(255, 255, 255, 0.10); 
+      }
     
 }
-@mixin shadow($x:0px,$y:4px,$blur:10px,$color:rgba(0,0,0,0.25)){
-    box-shadow: $x $y $blur $color;
-}
-// @include shadow(0px,4px ,15px ,0,0,0,0.35 );
+
+@mixin heart-transition {
+    transition: color 600ms, background-color 600ms ease-out;
+  }
+  
+  
+  @mixin heart-gradient {
+    background: linear-gradient(90deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  @mixin heart-checked {
+    content: "\f004"; 
+    color: transparent;  
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    @include heart-gradient;
+  }
+
+  @mixin font-container($width: 40px, $height: 40px, $color: $simpbol-color) {
+    width: $width;
+    height: $height;
+    margin-left: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .fa-solid {
+      font-size: calc(#{$height} * 1); 
+      width: 100%;
+      height: 100%;
+      color: $color;
+      display: block;
+      line-height: 1;
+    }
+  }
+
