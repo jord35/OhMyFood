@@ -1,8 +1,42 @@
-body {
+.body {
     margin: 0px;
+    
+    &--menu {
+      .navbar__home-link{
+        display: inline-block;
+      }
+    }
+    &--Homepage {
+      .navbar__home-link{
+        display: none;
+      }
+    } 
   }
 .title {
     @include style-title(24px, bold, start, 0px 0px);
   }
 *{font-family: 'Roboto',sans-serif;
+}
+
+.icon-toggle {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+
+  .icon-toggle-checkbox {
+    display: none;
+  }
+
+  .fa-regular {
+    font-size: 22px;
+    font-weight: 300;
+    color: black;
+    @include icon-toggle-transition; 
+    }
+
+    .icon-toggle-checkbox:checked + .fa-regular {
+    @include icon-toggle-checked; 
+    }
+
+  
 }

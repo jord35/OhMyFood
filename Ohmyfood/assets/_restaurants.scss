@@ -60,32 +60,7 @@
         justify-content: space-between;
         background-color: $light-white;
         border-radius: 0px 0px 15px 15px;
-  
-        .restaurant__heart {
-          position: relative;
-          cursor: pointer;
-          display: inline-block;
-  
-          .restaurant__heart-checkbox {
-            display: none;
-          }
-  
-          .fa-regular {
-            font-size: 22px;
-            font-weight: 300;
-            color: black;
-            @include heart-transition; 
-            }
-  
-          .restaurant__heart-checkbox:checked + .fa-regular {
-            @include heart-checked; 
-            }
-  
-          
-        }
-  
-  
-                
+       
         .restaurant__txt{
           display: flex;
           flex-direction: column;
@@ -96,7 +71,7 @@
           }
           .restaurant__subtitle {
             @include style-title(17px,lighter,start,0px);
-            color: black;
+            color: #000000;
           }    
         }
           
