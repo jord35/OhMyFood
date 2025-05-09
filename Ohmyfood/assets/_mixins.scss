@@ -76,5 +76,9 @@
     position: relative;
     z-index: 0;
     // overflow: hidden;
-    // bottom: 10%;
+    // bottom: 10%
+    @media(min-width:1440px){
+      height: 383px;
+      background-position: center -348px;
+    };
   }

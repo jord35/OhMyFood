@@ -9,6 +9,8 @@
         gap: 80px;
         align-items: flex-end;
         justify-content: flex-end;
+        min-height: 114px;
+        padding-bottom: 30px;
        
 
     }
@@ -20,6 +22,7 @@
         font-weight: 400;
         @media(min-width:1440px){
             order: 2;
+            margin-right: 55px;
         }
        }
     .footer__ul{

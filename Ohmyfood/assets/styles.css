@@ -108,6 +108,8 @@
     gap: 80px;
     align-items: flex-end;
     justify-content: flex-end;
+    min-height: 114px;
+    padding-bottom: 30px;
   }
 }
 .footer .footer__logo {
@@ -120,6 +122,7 @@
 @media (min-width: 1440px) {
   .footer .footer__logo {
     order: 2;
+    margin-right: 55px;
   }
 }
 .footer .footer__ul {
@@ -215,6 +218,11 @@
   align-items: center;
   height: 63px;
 }
+@media (min-width: 1440px) {
+  .navbar {
+    height: 96.34px;
+  }
+}
 .navbar .navbar__img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -250,7 +258,7 @@
 @media (min-width: 1440px) {
   .functioning .functioning__cards {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     gap: 24px;
   }
 }
@@ -437,6 +445,12 @@
   position: relative;
   z-index: 0;
 }
+@media (min-width: 1440px) {
+  .img__restaurent--A {
+    height: 383px;
+    background-position: center -348px;
+  }
+}
 
 .menu {
   margin: -60px auto 0 auto;
@@ -450,6 +464,12 @@
   padding: 13px;
   gap: 40px;
 }
+@media (min-width: 1440px) {
+  .menu {
+    margin: -60px 195.5px 0 195.5px;
+    padding: 13px 211.5px;
+  }
+}
 .menu .menu__titlebox {
   display: flex;
   flex-direction: row;
@@ -457,6 +477,11 @@
   justify-content: flex-start;
   gap: 25px;
   width: 100%;
+}
+@media (min-width: 1440px) {
+  .menu .menu__titlebox {
+    justify-content: center;
+  }
 }
 .menu .menu__title {
   text-align: start;
@@ -529,7 +554,7 @@
   width: 100%;
   height: 100%;
   padding-left: 20px;
-  border: none;
+  border: solid, #F6F6F6, 1px;
   border-radius: 15.04px;
   transition: width 0.4s ease;
 }
@@ -538,6 +563,18 @@
   flex-direction: column;
   margin-top: 13.5px;
   gap: 5px;
+}
+.menu__clikablebox--transformable .menu__textarea .menu__cardtitle {
+  text-align: start;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px 0px;
+}
+.menu__clikablebox--transformable .menu__textarea .menu__cardsubtitle {
+  text-align: start;
+  font-size: 15.04px;
+  font-weight: lighter;
+  margin: 0px 0px;
 }
 .menu__clikablebox--transformable .menu__price {
   display: flex;
@@ -553,12 +590,19 @@
   right: 0;
   width: 80px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #99E2D0;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   z-index: 1;
+}
+
+.iconsheck {
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  font-size: 20px;
 }
 
 .menu__checkbox:checked ~ .menu__clikablebox--transformable {
@@ -566,6 +610,6 @@
   border-radius: 15.04px 0 0 15.04px;
 }
 
-.menu__checkbox:checked ~ .menu__clikablebox--beyond {
-  background-color: #008766;
+.menu__checkbox:checked ~ .menu__clikablebox--beyond .iconsheck {
+  transform: translateX(53%);
 }/*# sourceMappingURL=styles.css.map */

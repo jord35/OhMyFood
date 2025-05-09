@@ -1,5 +1,6 @@
 .img__restaurent--A {
   @include img__restaurent("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  
   }
 .menu {
   margin: -60px auto 0 auto; 
@@ -12,6 +13,10 @@
   background-color: $dark-white;
   padding: 13px;
   gap: 40px;
+  @media(min-width:1440px){
+    margin: -60px 195.5px 0 195.5px;
+    padding: 13px 211.5px;
+  }
 
 
   .menu__titlebox{
@@ -21,6 +26,9 @@
     justify-content: flex-start;
     gap: 25px;
     width: 100%;
+    @media(min-width:1440px){
+      justify-content: center;
+    }
     
   }
   .menu__title{
@@ -83,14 +91,22 @@
   width: 100%;
   height: 100%;
   padding-left: 20px;
-  border: none;
+  border: solid , $dark-white,1px ;
   border-radius: 15.04px;
   transition: width 0.4s ease;
   .menu__textarea{
     display: flex;
     flex-direction: column;
     margin-top: 13.5px;
-    gap:5px
+    gap:5px;
+
+    .menu__cardtitle{
+      @include style-title(18px, 500, start, 0px 0px);
+
+    }
+    .menu__cardsubtitle{
+      @include style-title(15.04px, lighter, start, 0px 0px);
+    }
   }
   .menu__price{
     display: flex;
@@ -108,13 +124,23 @@
   top: 0;
   right: 0;
   width: 80px;
+  // margin: 1px 1px;
   height: 100%;
-  background-color: $light-white;
+  // border-radius: 15px;
+  background-color: $light-green;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   z-index: 1;
+  
+}
+.iconsheck {
+  transform: translateX(400%); 
+  transition: transform 0.4s ease;
+  font-size: 20px;
+  // position: absolute;
 }
 
 
@@ -123,11 +149,13 @@
   border-radius: 15.04px 0 0 15.04px;
 }
 
-.menu__checkbox:checked ~ .menu__clikablebox--beyond{
-  background-color: $dark-green;
+// .menu__checkbox:checked ~ .menu__clikablebox--beyond{
+//   background-color: $dark-green;
   
+// }
+
+.menu__checkbox:checked ~ .menu__clikablebox--beyond .iconsheck{
+  transform: translateX(53%);
 }
-
-
 
 
