@@ -3,7 +3,7 @@
   background-color: $dark-white;
   @media(min-width:1440px){
     padding: 30px 180px ;
-    .title{
+    .homepage__title{
       margin-bottom: 28px;
     }
   }
@@ -68,6 +68,7 @@
           .restaurant__title {
             @include style-title(18px,bold,center,0px);
             color: black;
+            opacity: 90%;
           }
           .restaurant__subtitle {
             @include style-title(17px,lighter,start,0px);

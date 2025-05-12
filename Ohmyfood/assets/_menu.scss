@@ -9,13 +9,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 40px 40px 0px 0px;
   background-color: $dark-white;
-  padding: 13px;
+  padding: 32px 13px 0px 13px;
   gap: 40px;
   @media(min-width:1440px){
-    margin: -60px 195.5px 0 195.5px;
-    padding: 13px 211.5px;
+    margin: -40px 195.5px 0 195.5px;
+    padding: 0px 211.5px;
   }
 
 
@@ -28,6 +28,7 @@
     width: 100%;
     @media(min-width:1440px){
       justify-content: center;
+      margin-top: 40px;
     }
     
   }
@@ -60,7 +61,7 @@
   }
   
   .menu__btn{
-    @include btn($margin: 0px 0px 40px 0px);
+    @include btn($width:186px, $margin:0px 0px 40px 0px);
   }
 
 }
@@ -91,9 +92,9 @@
   width: 100%;
   height: 100%;
   padding-left: 20px;
-  border: solid , $dark-white,1px ;
+  border: solid , $dark-white,2px ;
   border-radius: 15.04px;
-  transition: width 0.4s ease;
+  transition: width 0.4s ease-in, border-radius 0.4s ease-in;
   .menu__textarea{
     display: flex;
     flex-direction: column;
@@ -101,11 +102,12 @@
     gap:5px;
 
     .menu__cardtitle{
-      @include style-title(18px, 500, start, 0px 0px);
+      @include style-title(18px, bold, start, 0px 0px);
 
     }
     .menu__cardsubtitle{
       @include style-title(15.04px, lighter, start, 0px 0px);
+      opacity: 90%;
     }
   }
   .menu__price{
@@ -147,6 +149,7 @@
 .menu__checkbox:checked ~ .menu__clikablebox--transformable {
   width: calc(100% - 80px);
   border-radius: 15.04px 0 0 15.04px;
+  transition: width 0.4s ease-out, border-radius 0.0s ease-out ;
 }
 
 // .menu__checkbox:checked ~ .menu__clikablebox--beyond{
