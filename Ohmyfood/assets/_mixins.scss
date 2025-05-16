@@ -75,10 +75,49 @@
     height: 275px;
     position: relative;
     z-index: 0;
-    // overflow: hidden;
-    // bottom: 10%
     @media(min-width:1440px){
       height: 383px;
       background-position: center -325px;
     };
   }
+
+
+   @mixin loader__element(
+  $background: linear-gradient(90deg, #4e883f, #60bd9e),
+  $border-radius: 100% 0% 100% 0%,
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null,
+  $delay: 0s
+) 
+
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 40%;
+  background: $background;
+  border-radius: $border-radius;
+  position: absolute;
+
+  @if $top != null { top: $top; }
+  @if $bottom != null { bottom: $bottom; }
+  @if $left != null { left: $left; }
+  @if $right != null { right: $right; }
+
+  opacity: 1;
+  animation: loaderAnim 600ms ease-in-out infinite alternate;
+  animation-delay: $delay;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+
+
+
+
+

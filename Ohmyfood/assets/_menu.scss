@@ -44,6 +44,17 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    opacity: 0;
+    animation: fadestart 0.3s ease forwards;
+      &--entree {
+        animation-delay: 0.1s;
+        }
+      &--plats {
+        animation-delay: 0.4s;
+      }
+      &--dessert {
+        animation-delay: 0.7s;
+      }
     
   }
 
