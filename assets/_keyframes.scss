@@ -1,0 +1,63 @@
+// Animation : apparition progressive avec décalage vertical vers le haut
+@keyframes fadestart {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ===============================================
+// Animations du loader et transition vers le site
+// ===============================================
+// Animation loader : effet de rebond, zoom et translation sur l’axe Y
+@keyframes loaderAnim {
+    0% {
+        transform: translateZ(0) translateY(4px) scale(0.8);
+    }
+
+    25% {
+        transform: translateZ(0.5px) translateY(2px) scale(0.9);
+    }
+
+    50% {
+        transform: translateZ(1px) translateY(0px) scale(1.2);
+    }
+
+    75% {
+        transform: translateZ(0.5px) translateY(2px) scale(1.1);
+    }
+
+    100% {
+        transform: translateZ(0) translateY(4px) scale(1);
+    }
+}
+
+// Animation pour masquer le loader progressivement avec disparition complète
+@keyframes hideLoader {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+// Animation pour faire apparaître la page (opacity de 0 à 1)
+@keyframes showPage {
+    to {
+        opacity: 1;
+    }
+}

@@ -1,76 +1,27 @@
-.navbar{
+.navbar {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 63px;
-    @media(min-width:1440px){
+
+    @media(min-width:1440px) {
         height: 96.34px;
     }
-    
-    
+
+
     .navbar__img {
         object-fit: contain;
         width: 197px;
         height: 36px;
-    }   
+    }
+
     .navbar__home-link {
         position: absolute;
         left: 20px;
         font-size: 20px;
         color: black;
-      }
-    
+    }
+
 
 }
-
-
-
-
-// ______________________________________________
-
-// .body {
-//     margin: 0px;
-    
-//     &--menu {
-//       .navbar__home-link{
-//         display: inline-block;
-//       }
-//     }
-//     &--Homepage {
-//       .navbar__home-link{
-//         display: none;
-//       }
-//     } 
-//   }
-
-// .navbar{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center; 
-//     height: 63px; 
-//     .navbar__img {
-//         object-fit: contain;
-//         width: 197px;
-//         height: 36px;
-//     }   
-
-//     .navbar__home-link{
-//         justify-content: flex-start;
-//     }
-
-// }
-
-// <body class="body--Homepage">
-//     <main>
-//         <nav class="navbar">
-//             <i class="fa-solid fa-arrow-left navbar__home-link"></i>
-//             <img class="navbar__img" src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
-//         </nav>
-
-// <body class="body--menu">
-//     <main >
-//         <nav class="navbar">
-//             <i class="fa-solid fa-arrow-left navbar__home-link"></i>
-//             <img class="navbar__img" src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
-//         </nav>

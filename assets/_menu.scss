@@ -1,9 +1,10 @@
 .img__restaurent--A {
   @include img__restaurent("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  
-  }
+
+}
+
 .menu {
-  margin: -60px auto 0 auto; 
+  margin: -60px auto 0 auto;
   position: relative;
   z-index: 1;
   display: flex;
@@ -13,70 +14,79 @@
   background-color: $dark-white;
   padding: 32px 13px 0px 13px;
   gap: 40px;
-  @media(min-width:1440px){
+
+  @media(min-width:1440px) {
     margin: -40px 195.5px 0 195.5px;
     padding: 0px 211.5px;
   }
 
 
-  .menu__titlebox{
+  .menu__titlebox {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 25px;
     width: 100%;
-    @media(min-width:1440px){
+
+    @media(min-width:1440px) {
       justify-content: center;
       margin-top: 40px;
     }
-    
-  }
-  .menu__title{
-    @include style-title($size: 28px, $weight: lighter, $align: start, $margin: 0px);
-    font-family: Shrikhand ;
-    color: #101010;
-    
+
   }
 
-  .menu__steps{
+  .menu__title {
+    @include style-title($size: 28px, $weight: lighter, $align: start, $margin: 0px);
+    font-family: Shrikhand;
+    color: #101010;
+
+  }
+
+  .menu__steps {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
     opacity: 0;
     animation: fadestart 0.3s ease forwards;
-      &--entree {
-        animation-delay: 0.1s;
-        }
-      &--plats {
-        animation-delay: 0.4s;
-      }
-      &--dessert {
-        animation-delay: 0.7s;
-      }
-    
+
+    &--entree {
+      animation-delay: 0.1s;
+    }
+
+    &--plats {
+      animation-delay: 0.4s;
+    }
+
+    &--dessert {
+      animation-delay: 0.7s;
+    }
+
   }
 
-  .menu__subtitle{
+  .menu__subtitle {
     @include style-title(16px, lighter, start, 0px 0px);
     display: inline;
     text-transform: uppercase;
     background-image: linear-gradient(to right, $light-green 100%, transparent 0%);
-    background-size: 40px 4px; /* largeur du soulignement */
+    background-size: 40px 4px;
+    /* largeur du soulignement */
     background-repeat: no-repeat;
     background-position: left bottom;
     padding: 0px 0px 8px 0px;
     width: 100%;
 
   }
-  
-  .menu__btn{
-    @include btn($width:186px, $margin:0px 0px 40px 0px);
+
+  .menu__btn {
+    @include btn($width: 186px, $margin: 0px 0px 40px 0px);
   }
 
 }
+
 // ______________________________________________________________________________________________
+// Conteneur principal des éléments cliquables du menu.
 .menu__clikablebox {
   position: relative;
   display: flex;
@@ -84,16 +94,16 @@
   height: 69px;
   border-radius: 15.04px;
   overflow: hidden;
-  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.10) 
-  
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.10)
 }
 
-
+// Case à cocher masquée (input) qui contrôle l’animation d'ouverture.
 .menu__checkbox {
   display: none;
 }
 
-
+// Partie visible de l élément du menu.
+// Se réduit en largeur lors du :checked pour laisser place à .menu__clickablebox--beyond.
 .menu__clikablebox--transformable {
   position: relative;
   z-index: 2;
@@ -103,43 +113,46 @@
   width: 100%;
   height: 100%;
   padding-left: 20px;
-  border: solid , $dark-white,2px ;
+  border: solid, $dark-white, 2px;
   border-radius: 15.04px;
   transition: width 0.4s ease-in, border-radius 0.4s ease-in;
-  .menu__textarea{
+
+  .menu__textarea {
     display: flex;
     flex-direction: column;
     margin-top: 13.5px;
-    gap:5px;
+    gap: 5px;
 
-    .menu__cardtitle{
+    .menu__cardtitle {
       @include style-title(18px, bold, start, 0px 0px);
 
     }
-    .menu__cardsubtitle{
+
+    .menu__cardsubtitle {
       @include style-title(15.04px, lighter, start, 0px 0px);
       opacity: 90%;
     }
   }
-  .menu__price{
+
+  .menu__price {
     display: flex;
     align-items: flex-end;
     margin: 0px 13.5px 13.5px 0px;
     font-size: 15.4px;
     font-weight: bold;
-    
+
 
   }
 }
 
+// Conteneur de l icône de validation (iconsheck) cachée par défaut.
+// S affiche depuis la droite lors de l activation (:checked).
 .menu__clikablebox--beyond {
   position: absolute;
   top: 0;
   right: 0;
   width: 80px;
-  // margin: 1px 1px;
   height: 100%;
-  // border-radius: 15px;
   background-color: $light-green;
   color: white;
   display: flex;
@@ -147,29 +160,25 @@
   justify-content: center;
   overflow: hidden;
   z-index: 1;
-  
+
 }
+
+// Icône de validation animée avec transform: translateX(...)
 .iconsheck {
-  transform: translateX(400%); 
+  transform: translateX(400%);
   transition: transform 0.4s ease;
   font-size: 20px;
-  // position: absolute;
 }
 
 
-.menu__checkbox:checked ~ .menu__clikablebox--transformable {
+.menu__checkbox:checked~.menu__clikablebox--transformable {
   width: calc(100% - 80px);
   border-radius: 15.04px 0 0 15.04px;
-  transition: width 0.4s ease-out, border-radius 0.0s ease-out ;
+  transition: width 0.4s ease-out, border-radius 0.0s ease-out;
 }
 
-// .menu__checkbox:checked ~ .menu__clikablebox--beyond{
-//   background-color: $dark-green;
-  
-// }
 
-.menu__checkbox:checked ~ .menu__clikablebox--beyond .iconsheck{
+
+.menu__checkbox:checked~.menu__clikablebox--beyond .iconsheck {
   transform: translateX(53%);
 }
-
-
