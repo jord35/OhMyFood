@@ -10,6 +10,18 @@
     }
   }
 
+  // Conteneur relatif pour pouvoir placer l’icône en absolute à l’intérieur
+  .restaurant__container {
+    position: relative; // Sert de référence au positionnement absolu de .restaurant__icon-container
+  }
+
+  // Conteneur pour Icône cliquable positionnée en bas à droite de la carte
+  .restaurant__icon-container {
+    position: absolute; // Positionnement par rapport à .restaurant__container
+    bottom: 25px;
+    right: 25px;
+  }
+
   // Conteneur de toutes les cartes de restaurants.
   .restaurant__cards {
     display: flex;
@@ -26,6 +38,7 @@
     //  Carte individuelle d’un restaurant.
     .restaurant__card {
       position: relative;
+      color: black;
       width: 100%;
       height: 251px;
       display: flex;
@@ -36,6 +49,8 @@
       text-decoration: none;
       outline: none;
       -webkit-tap-highlight-color: transparent;
+
+
 
       // Ajoute un badge "Nouveau" à la carte.
       &--new::after {

@@ -30,31 +30,8 @@
   font-family: 'Roboto', sans-serif;
 }
 
-// Gère l'affichage d'une icône cliquable avec effet de remplissage (ex : cœur)
-// Utilise Font Awesome + case à cocher cachée pour la bascule d'état
-.icon-toggle {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
 
-  // Caché visuellement, utilisé pour détecter l'état :checked
-  .icon-toggle-checkbox {
-    display: none;
-  }
 
-  // Icône vide (état initial)
-  .fa-regular {
-    font-size: 22px;
-    font-weight: 300;
-    color: black;
-    @include icon-toggle-transition;
-  }
-
-  // Icône remplie (état checked)
-  .icon-toggle-checkbox:checked+.fa-regular {
-    @include icon-toggle-checked;
-  }
-}
 
 // Affiche un écran de chargement animé sur la moitié (ou totalité) de l’écran
 // S’efface automatiquement après 3 secondes via l’animation hideLoader
@@ -68,7 +45,7 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: hideLoader 0.3s ease-out 3s forwards;
+  animation: hideLoader 0.3s ease-out 0s forwards;
 
   @media(min-width:1440px) {
     height: 100%;
@@ -88,8 +65,10 @@
 // Affiche le contenu principal après le loader
 .page-content {
   opacity: 0;
-  animation: showPage 0.3s ease-in 3.1s forwards;
+  animation: showPage 0.3s ease-in 0s forwards;
 }
+
+// 3.1s
 
 // Loader animé : Définition des 3 éléments du loader
 // Chaque élément utilise la mixin loader__element avec ses propres styles
@@ -104,5 +83,68 @@
 
 .loader__element-right {
   @include loader__element($border-radius: 100% 0% 100% 0%, $top: 18%, $right: 10%, $delay: 400ms);
+
+}
+
+
+
+// Rend l'élément cliquable
+.icon-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  // Animation fluide à l’apparition/disparition
+  .fa-heart {
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  // Icône cœur vide au premier plan
+  .fa-regular {
+    z-index: 2;
+  }
+
+  // Dégradé appliqué a l'icone
+  // Nécessaire pour rendre le dégradé visible
+  .icon-toggle__full {
+    background: linear-gradient(90deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+
+  // Fait disparaître le cœur vide
+  .icon-toggle__checkbox:checked~.fa-regular {
+    opacity: 0;
+  }
+
+  // Fait apparaître le cœur plein avec un effet d’agrandissement
+  .icon-toggle__checkbox:checked~.icon-toggle__full {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+
+  .icon-toggle__checkbox {
+    display: none;
+  }
+
 
 }

@@ -5,8 +5,11 @@
   margin: $margin;
 }
 
-// btn global pour tout le site avec animation au hover 
+// Mixin global pour les boutons avec animation au hover
 @mixin btn($width: 218px, $font-size: 16px, $margin: 0px 0px 57px 0px) {
+  // Style de base
+  position: relative;
+  z-index: 0;
   width: $width;
   font-size: $font-size;
   margin: $margin;
@@ -18,54 +21,50 @@
   background: linear-gradient(-161deg, $pink, $purple);
   height: 50px;
   color: $light-white;
-  padding: 0px;
-  transition: box-shadow 300ms;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 50px rgba(255, 255, 255, 0.0);
+  padding: 0;
+  cursor: pointer;
 
-  &:hover {
-    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25), inset 0px 0px 0.5px 50px rgba(255, 255, 255, 0.10);
+  // Pseudo-éléments pour les effets visuels
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transition: opacity 300ms ease;
   }
 
+  // Ombre normale (état initial)
+  &::before {
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+  }
+
+  // Ombre plus marquée + effet lumineux (état hover)
+  &::after {
+    z-index: 2;
+    box-shadow:
+      0 4px 10px 5px rgba(0, 0, 0, 0.25),
+      inset 0 0 0.5px 50px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+  }
+
+  // Animation au survol : passage en fondu de ::before à ::after
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 
-// ============================
-// Mixins pour les icônes animées
-// ============================
 
-// Mixin : icon-toggle-transition
-// ------------------------------
-// Applique une transition douce pour la couleur et le fond au clic ou au survol
-@mixin icon-toggle-transition {
-  transition: color 600ms, background-color 600ms ease-out;
-}
 
-// Mixin : icon-toggle-gradient
-// ----------------------------
-// Applique un dégradé coloré uniquement sur le texte (effet "color fill" avec Font Awesome)
-@mixin icon-toggle-gradient {
-  background: linear-gradient(90deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-// Mixin : icon-toggle-checked
-// ---------------------------
-// Définit le contenu d'une icône (ex: cœur rempli) après activation (ex: clic sur un bouton)
-// Utilise Font Awesome
-// Paramètres :
-// $content      - Caractère Unicode (ex: "\f004" pour un cœur rempli)
-// $color        - Couleur de base de l’icône (souvent transparent pour clip)
-// $font-family  - Famille Font Awesome (par défaut : "Font Awesome 6 Free")
-// $font-weight  - Poids pour afficher les icônes solides (900 pour fa-solid)
-@mixin icon-toggle-checked($content: "\f004", $color: transparent, $font-family: "Font Awesome 6 Free", $font-weight: 900) {
-  content: $content;
-  color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
-  @include icon-toggle-gradient;
-}
 
 // _____________________________________________________________________________________________________________________
 
@@ -120,7 +119,7 @@
 // $top/$left/...  - Position absolue (optionnels)
 // $delay          - Décalage dans l’animation (par défaut : 0s)
 
-@mixin loader__element($background: linear-gradient(90deg, #4e883f, #60bd9e),
+@mixin loader__element($background: linear-gradient(90deg, $dark-green, $light-green),
   $border-radius: 100% 0% 100% 0%,
   $top: null,
   $left: null,

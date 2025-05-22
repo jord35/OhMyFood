@@ -40,12 +40,13 @@
       }
     }
 
+    // Symboles différents selon chaque carte 
     .functioning__font-container--mobile {
-      @include font-container(13.02px, 19.9px, $simpbol-color)
+      @include font-container(13.02px, 19.9px, $symbol-color)
     }
 
     .functioning__font-container--list {
-      @include font-container(16px, 15.92px, $simpbol-color)
+      @include font-container(16px, 15.92px, $symbol-color)
     }
 
     .functioning__font-container--store {

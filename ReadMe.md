@@ -80,3 +80,12 @@ Renommer .menu__clikablebox--beyond → .menu__clikablebox--hidden :
 Nommage plus clair et logique : l’élément est derrière et masqué par défaut.
 
 Facilite la lecture et la maintenance du code.
+
+État du projet — 22/05/2025
+Finaliser les animations, le slide du menu, l’icône du cœur et les ombres via la mixin du bouton.
+
+Refonte de la structure HTML des cartes des restaurants.
+
+Validation HTML et CSS via le W3C.
+
+La base du projet est terminée.
