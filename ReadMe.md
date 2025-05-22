@@ -1,3 +1,7 @@
+https://github.com/jord35/OhMyFood
+https://jord35.github.io/OhMyFood/index.html
+
+----------
 
 État du projet — 20/05/2025
 
