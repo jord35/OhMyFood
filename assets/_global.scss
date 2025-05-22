@@ -45,7 +45,7 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: hideLoader 0.3s ease-out 0s forwards;
+  animation: hideLoader 0.3s ease-out 3s forwards;
 
   @media(min-width:1440px) {
     height: 100%;
@@ -65,10 +65,8 @@
 // Affiche le contenu principal après le loader
 .page-content {
   opacity: 0;
-  animation: showPage 0.3s ease-in 0s forwards;
+  animation: showPage 0.3s ease-in 3.1s forwards;
 }
-
-// 3.1s
 
 // Loader animé : Définition des 3 éléments du loader
 // Chaque élément utilise la mixin loader__element avec ses propres styles

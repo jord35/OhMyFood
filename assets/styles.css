@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   background-color: #F6F6F6;
 }
@@ -243,7 +244,7 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: hideLoader 0.3s ease-out 0s forwards;
+  animation: hideLoader 0.3s ease-out 3s forwards;
 }
 @media (min-width: 1440px) {
   .loader {
@@ -260,7 +261,7 @@
 
 .page-content {
   opacity: 0;
-  animation: showPage 0.3s ease-in 0s forwards;
+  animation: showPage 0.3s ease-in 3.1s forwards;
 }
 
 .loader__element-bottom {
@@ -565,6 +566,8 @@
   border-radius: 15px 15px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center 57%;
+     object-position: center 57%;
 }
 .restaurant .restaurant__cards .restaurant__card .restaurant__content {
   height: 30%;
@@ -596,7 +599,7 @@
   color: #000000;
 }
 
-.img__restaurent--A {
+.img__restaurent--La_palette_du_gout {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   background-position: center bottom;
@@ -606,9 +609,57 @@
   z-index: 0;
 }
 @media (min-width: 1440px) {
-  .img__restaurent--A {
+  .img__restaurent--La_palette_du_gout {
     height: 383px;
-    background-position: center -325px;
+    background-position: center -330px;
+  }
+}
+
+.img__restaurent--La_note_enchantee {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 275px;
+  position: relative;
+  z-index: 0;
+}
+@media (min-width: 1440px) {
+  .img__restaurent--La_note_enchantee {
+    height: 383px;
+    background-position: center -330px;
+  }
+}
+
+.img__restaurent--A_la_française {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 275px;
+  position: relative;
+  z-index: 0;
+}
+@media (min-width: 1440px) {
+  .img__restaurent--A_la_française {
+    height: 383px;
+    background-position: center -330px;
+  }
+}
+
+.img__restaurent--Le_delice_des_sens {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 275px;
+  position: relative;
+  z-index: 0;
+}
+@media (min-width: 1440px) {
+  .img__restaurent--Le_delice_des_sens {
+    height: 383px;
+    background-position: center -330px;
   }
 }
 
