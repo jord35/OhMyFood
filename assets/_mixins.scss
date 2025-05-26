@@ -74,8 +74,8 @@
 // Permet de gérer l'affichage des icônes Font Awesome utilisées dans la section "_functioning"
 // $width  - Largeur du conteneur (par défaut : 40px)
 // $height - Hauteur du conteneur (par défaut : 40px)
-// $color  - Couleur de l'icône (par défaut : $simpbol-color)
-@mixin font-container($width: 40px, $height: 40px, $color: $simpbol-color) {
+// $color  - Couleur de l'icône (par défaut : $symbol-color)
+@mixin font-container($width: 40px, $height: 40px, $color: $symbol-color) {
   width: $width;
   height: $height;
   display: flex;
